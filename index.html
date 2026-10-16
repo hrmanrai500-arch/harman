@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-parent {
+        height: 100vh;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-template-areas:
+          "one one four five"
+          "one one four five"
+          "one one four five";
+      }
+      .box {
+        background-color: aquamarine;
+      }
+      .one {
+        grid-area: one;
+        background: red;
+      }
+      .two {
+        grid-area: two;
+        background-color: gray;
+      }
+      .three {
+        grid-area: three;
+        background-color: rgb(128, 0, 85);
+      }
+      .four {
+        grid-area: four;
+        background-color: chocolate;
+      }
+      .five {   
+        grid-area: five;
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-parent">
+      <div class="box 1 one">1</div>
+      <div class="box 2 two">2</div>
+      <div class="box 3 three">3</div>
+      <div class="box 4 four">4</div>
+      <div class="box 5 five">5</div>
+    </div>
+  </body>
+</html>

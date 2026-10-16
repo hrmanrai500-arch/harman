@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1484px;
+        padding: 0 20px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .header {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-color: white;
+      }
+      .heading {
+        display: flex;
+        gap: 30px;
+      }
+      .logo {
+        text-transform: capitalize;
+        font-size: 35px;
+        font-weight: 900;
+        margin-left: 105px;
+      }
+      .cart {
+        font-weight: 900;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-top: 25px;
+      }
+      .login {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: 700;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 105px;
+        padding: 11px 22px;
+      }
+      .base {
+        font-size: 64px;
+        margin-bottom: 25px;
+      }
+      .order {
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 30px;
+      }
+      .Food {
+        max-width: 480px;
+      
+      }
+
+      .bg {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+      }
+      .small {
+        color: gray;
+      }
+      /* .in{
+        width: 33%;
+        display: inline-block;
+      } */
+      .txt {
+        color: gray;
+        font-size: 15px;
+        font-weight: lighter;
+      }
+      .sec{
+        background-color: whitesmoke;
+
+      }
+          .spacing{
+        padding: 113px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">foodie</div>
+      <div class="heading">
+        <a href="">Home </a>
+        <a href="">Restaurants</a>
+        <a href="">Menu</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="buttons">
+        <button class="cart">🛒</button>
+        <button class="login">login</button>
+      </div>
+    </header>
+    <section class="sec spacing">
+      <div class="container">
+        <div class="bg">
+          <div class="in">
+            <h6 class="small">YOUR FAVORITE FOOD</h6>
+            <h1 class="base">Delicious Food, Delivered To Your Door</h1>
+            <h6 class="txt">
+              Order delicious meals from your favorite restaurants and get them
+              delivered fresh and fast.
+            </h6>
+            <button class="order">Order now</button>
+            <div></div> <img
+            src="https://img.magnific.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="foodie"
+            class="Food"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

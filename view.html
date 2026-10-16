@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    color: #171717;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 72px;
+    padding: 0 7%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+}
+
+.login {
+    border: none;
+    background: #111;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 8px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 560px;
+}
+
+.small-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero-content > p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.order-btn {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+}
+
+.hero-image {
+    width: 480px;
+    height: 480px;
+
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.badge {
+    position: absolute;
+    background: white;
+    padding: 13px 18px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating {
+    top: 50px;
+    left: -30px;
+}
+
+.delivery {
+    right: -30px;
+    top: 180px;
+}
+
+.popular {
+    bottom: 40px;
+    left: 30px;
+}
+
+
+/* COMMON SECTION */
+
+.section {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.category span {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    font-size: 16px;
+}
+
+
+/* FOOD */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.food-image {
+    height: 250px;
+    position: relative;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+    background: white;
+    font-size: 22px;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    margin-bottom: 8px;
+}
+
+.food-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.food-bottom {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-bottom strong {
+    font-size: 20px;
+}
+
+.food-bottom button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* OFFER */
+
+.offer-section {
+    padding: 40px 7% 90px;
+}
+
+.offer {
+    min-height: 300px;
+    padding: 50px 60px;
+
+    background: #111;
+    color: white;
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.offer p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.offer h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.offer button {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 7px;
+}
+
+.offer-badge {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    background: white;
+    color: #111;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    position: absolute;
+    right: 100px;
+    top: 70px;
+}
+
+.offer-badge small {
+    font-size: 16px;
+}
+
+
+/* FEATURES */
+
+.features {
+    display: flex;
+    gap: 25px;
+}
+
+.feature {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.feature span {
+    font-size: 35px;
+}
+
+.feature h3 {
+    margin: 15px 0 10px;
+}
+
+.feature p {
+    color: #777;
+    line-height: 1.5;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 70px 7%;
+    background: #111;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+}
+
+footer a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.footer-logo p {
+    color: #aaa;
+    margin-top: 15px;
+}
+
+
+/* FIXED BUTTONS */
+
+.back-top,
+.help {
+    position: fixed;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #111;
+    color: white;
+
+    z-index: 200;
+}
+
+.back-top {
+    right: 25px;
+    bottom: 90px;   
+}
+
+.help {
+    right: 25px;
+    bottom: 25px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        width: 380px;
+        height: 380px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .rating {
+        left: -10px;
+    }
+
+    .delivery {
+        right: -10px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .offer {
+        padding: 40px 25px;
+    }
+
+    .offer h2 {
+        font-size: 32px;
+    }
+
+    .offer-badge {
+        width: 100px;
+        height: 100px;
+        right: 20px;
+        top: 30px;
+        font-size: 28px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Foodie</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Restaurants</a>
+            <a href="#">Menu</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="cart">🛒</button>
+            <button class="login">Login</button>
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <p class="small-title">YOUR FAVORITE FOOD</p>
+
+            <h1>
+                Delicious Food,
+                Delivered To Your Door
+            </h1>
+
+            <p>
+                Order delicious meals from your favorite restaurants
+                and get them delivered fresh and fast.
+            </p>
+
+            <button class="order-btn">Order Now</button>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Pizza">
+
+            <div class="badge rating">
+                ⭐ 4.9 Rating
+            </div>
+
+            <div class="badge delivery">
+                🚚 30 Min Delivery
+            </div>
+
+            <div class="badge popular">
+                🔥 Popular
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="section">
+
+        <div class="section-heading">
+            <p>EXPLORE</p>
+            <h2>Food Categories</h2>
+        </div>
+
+        <div class="categories">
+
+            <div class="category">
+                <span>🍕</span>
+                <h3>Pizza</h3>
+            </div>
+
+            <div class="category">
+                <span>🍔</span>
+                <h3>Burger</h3>
+            </div>
+
+            <div class="category">
+                <span>🍜</span>
+                <h3>Chinese</h3>
+            </div>
+
+            <div class="category">
+                <span>🌮</span>
+                <h3>Mexican</h3>
+            </div>
+
+            <div class="category">
+                <span>🍰</span>
+                <h3>Desserts</h3>
+            </div>
+
+            <div class="category">
+                <span>🥗</span>
+                <h3>Healthy</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Food -->
+    <section class="section">
+
+        <div class="section-heading">
+            <p>OUR MENU</p>
+            <h2>Popular Food</h2>
+        </div>
+
+        <div class="food-grid">
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Burger">
+
+                    <button class="heart">♡</button>
+                </div>
+
+                <div class="food-info">
+                    <h3>Cheese Burger</h3>
+                    <p>⭐ 4.8</p>
+
+                    <div class="food-bottom">
+                        <strong>₹199</strong>
+                        <button>+</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80" alt="Pizza">
+
+                    <button class="heart">♡</button>
+                </div>
+
+                <div class="food-info">
+                    <h3>Italian Pizza</h3>
+                    <p>⭐ 4.9</p>
+
+                    <div class="food-bottom">
+                        <strong>₹299</strong>
+                        <button>+</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80" alt="Noodles">
+
+                    <button class="heart">♡</button>
+                </div>
+
+                <div class="food-info">
+                    <h3>Asian Noodles</h3>
+                    <p>⭐ 4.7</p>
+
+                    <div class="food-bottom">
+                        <strong>₹179</strong>
+                        <button>+</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Burger">
+
+                    <button class="heart">♡</button>
+                </div>
+
+                <div class="food-info">
+                    <h3>Classic Burger</h3>
+                    <p>⭐ 4.8</p>
+
+                    <div class="food-bottom">
+                        <strong>₹229</strong>
+                        <button>+</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80" alt="Pizza">
+
+                    <button class="heart">♡</button>
+                </div>
+
+                <div class="food-info">
+                    <h3>Cheese Pizza</h3>
+                    <p>⭐ 4.9</p>
+
+                    <div class="food-bottom">
+                        <strong>₹259</strong>
+                        <button>+</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80" alt="Healthy Food">
+
+                    <button class="heart">♡</button>
+                </div>
+
+                <div class="food-info">
+                    <h3>Healthy Bowl</h3>
+                    <p>⭐ 4.6</p>
+
+                    <div class="food-bottom">
+                        <strong>₹219</strong>
+                        <button>+</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Offer -->
+    <section class="offer-section">
+
+        <div class="offer">
+
+            <div>
+                <p>LIMITED OFFER</p>
+
+                <h2>
+                    Get 50% OFF
+                    <br>
+                    On Your First Order
+                </h2>
+
+                <button>Order Now</button>
+            </div>
+
+            <div class="offer-badge">
+                50%
+                <small>OFF</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="section">
+
+        <div class="section-heading">
+            <p>WHY US</p>
+            <h2>Why Choose Foodie?</h2>
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+                <span>🚚</span>
+                <h3>Fast Delivery</h3>
+                <p>Get your food delivered quickly.</p>
+            </div>
+
+            <div class="feature">
+                <span>🍴</span>
+                <h3>Fresh Food</h3>
+                <p>Fresh and delicious meals every time.</p>
+            </div>
+
+            <div class="feature">
+                <span>💳</span>
+                <h3>Easy Payment</h3>
+                <p>Simple and secure payment options.</p>
+            </div>
+
+            <div class="feature">
+                <span>⭐</span>
+                <h3>Best Quality</h3>
+                <p>Quality food from trusted restaurants.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <h2>Foodie</h2>
+            <p>Delicious food delivered to your door.</p>
+        </div>
+
+        <div>
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div>
+            <h3>Support</h3>
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy</a>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+
+    </footer>
+
+
+    <!-- Fixed Buttons -->
+    <button class="back-top">↑</button>
+    <button class="help">💬</button>
+
+</body>
+</html>
+</body>
+</html>
