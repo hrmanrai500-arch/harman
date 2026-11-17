@@ -293,6 +293,9 @@ button {
     border-radius: 10px;
     /* justify-content: end; */
     position: relative;
+    width: 100%;
+    max-width: 100%
+    ;
 
 }
 
@@ -302,6 +305,9 @@ button {
     position: relative;
 
 
+}
+.gap img{
+    width: 100%;
 }
 
 .pdd {
@@ -536,54 +542,3 @@ button {
     background-color: black;
 }
 
-@media screen and (max-width:1400px) {
-    img {
-        max-width: 340px;
-        max-height: 340px;
-
-    }
-
-    .ratinggg {
-        display: none;
-
-    }
-
-    .Popular {
-        display: none;
-    }
-    .Delivery{
-        display: none;
-    }
-    .foodtxt{
-        padding-top: 20px;
-        font-size: 40px;
-    }
-}
-@media screen and (max-width:1200px) {
-    .nav{
-       gap: 20px; 
-    }
-}
-@media screen and (max-width:992px) {
-    .nav{
-        gap: 10px;
-    }
-    
-}
-@media screen and (max-width:768px) {
-    .nav{
-        display: none;
-    }
-    .cart{
-        display: none;
-    }
-    .login{
-        display: none;
-    }
-    
-}
-@media screen and (min-width:768px) {
-    .menu-togle{
-        display: none;
-    }
-}
